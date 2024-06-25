@@ -2,6 +2,7 @@ import { Children } from "react"
 import { Sidebar } from "@/components/siderbar"
 import { MobileHeader } from "@/components/mobile-header"
 
+
 type Props = {
   children: React.ReactNode
 }

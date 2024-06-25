@@ -14,17 +14,18 @@ type Props = {
 export const UserProgress = ({ activeCourse, points, hearts, hasActiveSubscription }: Props) => {
   return (
     <div className="flex items-center justify-between gap-x-2">
-      <Link href="/courses">
-        <Button variant="ghost">
-          <Image
-            src={activeCourse.imageSrc}
-            alt={activeCourse.title}
-            className="rounded-md border"
-            width={32}
-            height={32}
-          />
-        </Button>
-      </Link>
+      {/* don't need to go to courses page as we only have Spanish language  */}
+      {/* <Link href="/courses"> */}
+      <Button variant="ghost">
+        <Image
+          src={activeCourse.imageSrc}
+          alt={activeCourse.title}
+          className="rounded-md border"
+          width={32}
+          height={32}
+        />
+      </Button>
+      {/* </Link> */}
 
       <Link href="/shop">
         <Button variant="ghost" className="text-orange-500">
