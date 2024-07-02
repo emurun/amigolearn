@@ -88,6 +88,21 @@ const main = async () => {
         order: 1,
         quesion: 'Which one of these is "the man"?'
       },
+      {
+        id: 2,
+        lessonId: 1,
+        type: "ASSIST",
+        order: 2,
+        quesion: "the man"
+      },
+      {
+        id: 3,
+        lessonId: 1,
+        type: "SELECT",
+        order: 3,
+        quesion: 'Which one of these is "the robot"?'
+      },
+
       // {
       //   id: 2,
       //   lessonId: 2,
@@ -99,7 +114,7 @@ const main = async () => {
 
     await db.insert(schema.challengeOptions).values([
       {
-        id: 1,
+
         challengeId: 1, //which one is the man 
         imageSrc: "/boy.svg",
         correct: true,
@@ -107,7 +122,7 @@ const main = async () => {
         audioSrc: "/es_man.mp3",
       },
       {
-        id: 2,
+
         challengeId: 1,
         imageSrc: "/girl.svg",
         correct: false,
@@ -115,10 +130,62 @@ const main = async () => {
         audioSrc: "/es_woman.mp3",
       },
       {
-        id: 3,
+
         challengeId: 1,
         imageSrc: "/zombie.svg",
         correct: false,
+        text: "el robot",
+        audioSrc: "/es_robot.mp3",
+      },
+
+    ]);
+
+    await db.insert(schema.challengeOptions).values([
+      {
+
+        challengeId: 2, //which one is the man 
+        correct: true,
+        text: "el hombre",
+        audioSrc: "/es_man.mp3",
+      },
+      {
+
+        challengeId: 2,
+        correct: false,
+        text: "la mujer",
+        audioSrc: "/es_woman.mp3",
+      },
+      {
+
+        challengeId: 2,
+        correct: false,
+        text: "el robot",
+        audioSrc: "/es_robot.mp3",
+      },
+
+    ]);
+
+    await db.insert(schema.challengeOptions).values([
+      {
+        challengeId: 3,  //which one is the robot
+        imageSrc: "/boy.svg",
+        correct: false,
+        text: "el hombre",
+        audioSrc: "/es_man.mp3",
+      },
+      {
+
+        challengeId: 3,
+        imageSrc: "/girl.svg",
+        correct: false,
+        text: "la mujer",
+        audioSrc: "/es_woman.mp3",
+      },
+      {
+
+        challengeId: 3,
+        imageSrc: "/zombie.svg",
+        correct: true,
         text: "el robot",
         audioSrc: "/es_robot.mp3",
       },
