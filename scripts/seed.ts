@@ -112,6 +112,7 @@ const main = async () => {
       // }
     ]);
 
+
     await db.insert(schema.challengeOptions).values([
       {
 
@@ -192,6 +193,38 @@ const main = async () => {
 
     ]);
 
+
+    await db.insert(schema.challenges).values([
+      {
+        id: 4,
+        lessonId: 2, //verbs
+        type: "SELECT",
+        order: 1,
+        quesion: 'Which one of these is "the man"?'
+      },
+      {
+        id: 5,
+        lessonId: 2,
+        type: "ASSIST",
+        order: 2,
+        quesion: "the man"
+      },
+      {
+        id: 6,
+        lessonId: 2,
+        type: "SELECT",
+        order: 3,
+        quesion: 'Which one of these is "the robot"?'
+      },
+
+      // {
+      //   id: 2,
+      //   lessonId: 2,
+      //   type: "ASSIST",
+      //   order: 2,
+      //   quesion: 'Which one of these is "the woman"?'
+      // }
+    ]);
     console.log("Seeding finished");
 
   } catch (error) {
