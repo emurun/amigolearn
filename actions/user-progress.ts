@@ -6,9 +6,7 @@ import db from "@/db/drizzle";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { and, eq } from "drizzle-orm";
-
-//to do: move alongside ITEM 
-const POINTS_TO_REFILL = 10;
+import { POINTS_TO_REFILL } from "@/constants";
 
 export const upsertUserProgress = async (courseId: number) => {
   const { userId } = await auth();
@@ -25,9 +23,9 @@ export const upsertUserProgress = async (courseId: number) => {
   }
 
 
-  // if(!courses.units.length || !course.units[0].lessons.length) {
-  //   throw new Error("Course is empty")
-  // }
+  if (!course.units.length || !course.units[0].lessons.length) {
+    throw new Error("Course is empty")
+  }
 
   const existingUserProgress = await getUserProgress();
 
