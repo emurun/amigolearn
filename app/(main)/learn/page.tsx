@@ -8,7 +8,7 @@ import { upsertUserProgress } from "@/actions/user-progress";
 import { redirect } from "next/navigation";
 import { } from "@/db/queries"
 import { Unit } from "./unit";
-import { off } from "process";
+import { Quests } from "@/components/ui/quests";
 
 const LearnPage = async () => {
   const userProgressData = getUserProgress();
@@ -36,7 +36,7 @@ const LearnPage = async () => {
             hearts={userProgress.hearts}
             points={userProgress.points}
             hasActiveSubscription={false} />
-
+          <Quests points={userProgress.points} />
         </StickyWrapper>
       </Link>
       <FeedWrapper>
