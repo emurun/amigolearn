@@ -86,21 +86,21 @@ const main = async () => {
         lessonId: 1,
         type: "SELECT",
         order: 1,
-        quesion: 'Which one of these is "the man"?'
+        question: 'Which one of these is "the man"?'
       },
       {
         id: 2,
         lessonId: 1,
         type: "ASSIST",
         order: 2,
-        quesion: "the man"
+        question: "the man"
       },
       {
         id: 3,
         lessonId: 1,
         type: "SELECT",
         order: 3,
-        quesion: 'Which one of these is "the robot"?'
+        question: 'Which one of these is "the robot"?'
       },
 
       // {
@@ -108,7 +108,7 @@ const main = async () => {
       //   lessonId: 2,
       //   type: "ASSIST",
       //   order: 2,
-      //   quesion: 'Which one of these is "the woman"?'
+      //   question: 'Which one of these is "the woman"?'
       // }
     ]);
 
@@ -200,21 +200,21 @@ const main = async () => {
         lessonId: 2, //verbs
         type: "SELECT",
         order: 1,
-        quesion: 'Which one of these is "the man"?'
+        question: 'Which one of these is "the man"?'
       },
       {
         id: 5,
         lessonId: 2,
         type: "ASSIST",
         order: 2,
-        quesion: "the man"
+        question: "the man"
       },
       {
         id: 6,
         lessonId: 2,
         type: "SELECT",
         order: 3,
-        quesion: 'Which one of these is "the robot"?'
+        question: 'Which one of these is "the robot"?'
       },
 
       // {
@@ -222,7 +222,7 @@ const main = async () => {
       //   lessonId: 2,
       //   type: "ASSIST",
       //   order: 2,
-      //   quesion: 'Which one of these is "the woman"?'
+      //   question: 'Which one of these is "the woman"?'
       // }
     ]);
     console.log("Seeding finished");

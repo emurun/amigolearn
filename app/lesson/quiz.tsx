@@ -170,7 +170,7 @@ export const Quiz = ({
   }
   const title = challenge.type === "ASSIST"
     ? "Select correct meaning"
-    : challenge.quesion;
+    : challenge.question;
 
   return (
     <>
@@ -187,7 +187,7 @@ export const Quiz = ({
 
 
               {challenge.type === "ASSIST" && (
-                <QuestionBubble question={challenge.quesion} />
+                <QuestionBubble question={challenge.question} />
               )}
               <Challenge options={options}
                 onSelect={onSelect}
